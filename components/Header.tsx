@@ -25,7 +25,12 @@ const Header: React.FC = () => {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="px-3 py-2 rounded transition-colors duration-200 text-white hover:text-[#C18653]"
+                className={`px-3 py-2 rounded transition-colors duration-200 ${
+                  pathname === link.href
+                    ? "bg-[#C18653] text-[#2F5663] font-bold shadow"
+                    : "text-white hover:text-[#C18653]"
+                }`}
+                aria-current={pathname === link.href ? "page" : undefined}
               >
                 {link.name}
               </Link>
