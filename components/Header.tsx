@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <header className="bg-[#2F5663] shadow-lg">
       <nav className="container mx-auto flex justify-between items-center py-4 px-6">
         <Link href="/" className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-[#C18653]">
-          Sarbloh Music
+          Sarbloh Vibes
         </Link>
         <ul className="flex space-x-6">
           {NAV_LINKS.map(link => (
