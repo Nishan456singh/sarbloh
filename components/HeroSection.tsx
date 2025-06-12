@@ -5,7 +5,7 @@ const heroImage = "/dessert.png"
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="w-full py-20 flex flex-col items-center">
+    <section className="w-full min-h-[calc(100vh-64px)] flex flex-col items-center justify-center bg-gradient-to-b from-[#2F5663] to-[#1a2a33] px-2 md:px-0">
       <div className="relative flex flex-col items-center w-full max-w-3xl">
         <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl group transition-all duration-500">
           {/* Animated glowing background */}
@@ -14,17 +14,17 @@ const HeroSection: React.FC = () => {
           <img
             src={heroImage}
             alt="Hero"
-            className="w-full h-96 object-cover rounded-3xl group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-56 xs:h-64 sm:h-80 md:h-96 object-cover rounded-3xl group-hover:scale-105 transition-transform duration-500"
           />
           {/* Overlay Text */}
           <div className="absolute inset-0 flex flex-col justify-center items-center z-10 bg-black/30 group-hover:bg-black/40 transition-all duration-500">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-4 text-center animate-fade-in">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-3 sm:mb-4 text-center animate-fade-in">
               Dive Into The World of Music
             </h1>
-            <p className="text-lg md:text-2xl text-[#C18653] font-semibold mb-6 text-center animate-fade-in delay-150">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-[#C18653] font-semibold mb-4 sm:mb-6 text-center animate-fade-in delay-150">
               Listen, Discover, and Feel Every Beat
             </p>
-            <button className="px-8 py-3 bg-[#C18653] text-white font-bold rounded-full shadow-lg hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 animate-fade-in delay-300">
+            <button className="px-6 py-2 sm:px-8 sm:py-3 bg-[#C18653] text-white font-bold rounded-full shadow-lg hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 animate-fade-in delay-300">
               Get Started
             </button>
           </div>

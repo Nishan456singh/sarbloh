@@ -1,18 +1,18 @@
 "use client"
 import React from "react";
-import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 
 const Footer: React.FC = () => (
-  <footer className="w-full bg-[#2F5663] text-white py-6 px-4 mt-[0.3] shadow-inner">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div className="flex items-center gap-2">
-        <span className="text-lg font-bold tracking-wide bg-gradient-to-r from-[#C18653] to-[#e1e8eb] bg-clip-text text-transparent">
+  <footer className="fixed bottom-0 left-0 w-full bg-[#2F5663] text-white py-4 px-2 shadow-inner z-50">
+    <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+        <span className="text-base sm:text-lg font-bold tracking-wide bg-gradient-to-r from-[#C18653] to-[#e1e8eb] bg-clip-text text-transparent">
           Sarbloh Music
         </span>
-        <span className="text-xs text-gray-300 ml-2">© {new Date().getFullYear()} All rights reserved.</span>
+        <span className="text-xs text-gray-300 ml-0 sm:ml-2">© {new Date().getFullYear()} All rights reserved.</span>
       </div>
-      <div className="flex items-center gap-5 mt-2 md:mt-0">
+      <div className="flex items-center gap-4 mt-2 sm:mt-0">
         <a
           href="https://github.com/"
           target="_blank"
