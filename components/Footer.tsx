@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
     <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
       <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
         <span className="text-base sm:text-lg font-bold tracking-wide bg-gradient-to-r from-[#C18653] to-[#e1e8eb] bg-clip-text text-transparent">
-          Sarbloh Music
+          Sarbloh Vibes
         </span>
         <span className="text-xs text-gray-300 ml-0 sm:ml-2">© {new Date().getFullYear()} All rights reserved.</span>
       </div>
