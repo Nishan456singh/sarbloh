@@ -43,12 +43,6 @@ const Header: React.FC = () => {
           <Link href="/" className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-[#C18653]">
             Sarbloh Vibes
           </Link>
-          <Link
-            href="/music"
-            className="ml-4 px-4 py-2 rounded-full bg-[#C18653] text-[#2F5663] font-bold shadow hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300"
-          >
-            Get Started
-          </Link>
           {/* Mobile Hamburger */}
           <button
             className="md:hidden text-white text-3xl focus:outline-none ml-2"
@@ -65,16 +59,13 @@ const Header: React.FC = () => {
               fade ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
             style={{
-              minWidth: 320,
-              maxWidth: 420,
+              minWidth: 620,
+              maxWidth: 820,
               minHeight: 10,
             }}
           >
             <span className="text-base font-semibold text-gray-800 text-center transition-colors duration-700">
               {QUOTES[current]}
-            </span>
-            <span className="mt-1 text-xs text-gray-500 tracking-wide">
-              Next quote in 2 minutes
             </span>
           </div>
           <div className="flex gap-1 mt-2">
@@ -107,13 +98,6 @@ const Header: React.FC = () => {
             >
               Sarbloh Vibes
             </Link>
-            <Link
-              href="/music"
-              className="px-8 py-3 rounded-full bg-[#C18653] text-[#2F5663] font-bold shadow hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 text-xl"
-              onClick={() => setMobileOpen(false)}
-            >
-              Get Started
-            </Link>
             {/* Quotes Glass Card for Mobile */}
             <div className="flex flex-col items-center">
               <div
@@ -121,16 +105,13 @@ const Header: React.FC = () => {
                   fade ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
                 style={{
-                  minWidth: 220,
-                  maxWidth: 320,
-                  minHeight: 80,
+                  minWidth: 620,
+                  maxWidth: 820,
+                  minHeight: 10,
                 }}
               >
                 <span className="text-base font-semibold text-gray-800 text-center mb-2 transition-colors duration-700">
                   {QUOTES[current]}
-                </span>
-                <span className="mt-1 text-xs text-gray-500 tracking-wide">
-                  Next quote in 2 minutes
                 </span>
               </div>
               <div className="flex gap-1 mt-2">
