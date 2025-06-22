@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { HiMenu, HiX } from "react-icons/hi";
 
 const QUOTES = [
@@ -39,10 +38,16 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-[#2F5663] shadow-lg fixed top-0 left-0 w-full z-50">
-      <nav className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center py-2 px-2 md:px-8 gap-4 md:gap-0">
+      <nav className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center py-4 px-4 md:px-8 gap-4 md:gap-0">
         <div className="flex flex-row justify-between items-center w-full md:w-auto">
           <Link href="/" className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-[#C18653]">
             Sarbloh Vibes
+          </Link>
+          <Link
+            href="/music"
+            className="ml-4 px-4 py-2 rounded-full bg-[#C18653] text-[#2F5663] font-bold shadow hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300"
+          >
+            Get Started
           </Link>
           {/* Mobile Hamburger */}
           <button
@@ -60,13 +65,16 @@ const Header: React.FC = () => {
               fade ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
             style={{
-              minWidth: 420,
-              maxWidth: 820,
+              minWidth: 320,
+              maxWidth: 420,
               minHeight: 10,
             }}
           >
             <span className="text-base font-semibold text-gray-800 text-center transition-colors duration-700">
               {QUOTES[current]}
+            </span>
+            <span className="mt-1 text-xs text-gray-500 tracking-wide">
+              Next quote in 2 minutes
             </span>
           </div>
           <div className="flex gap-1 mt-2">
@@ -99,6 +107,13 @@ const Header: React.FC = () => {
             >
               Sarbloh Vibes
             </Link>
+            <Link
+              href="/music"
+              className="px-8 py-3 rounded-full bg-[#C18653] text-[#2F5663] font-bold shadow hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 text-xl"
+              onClick={() => setMobileOpen(false)}
+            >
+              Get Started
+            </Link>
             {/* Quotes Glass Card for Mobile */}
             <div className="flex flex-col items-center">
               <div
@@ -106,20 +121,23 @@ const Header: React.FC = () => {
                   fade ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
                 style={{
-                  minWidth: 420,
-                  maxWidth: 820,
+                  minWidth: 220,
+                  maxWidth: 320,
                   minHeight: 80,
                 }}
               >
                 <span className="text-base font-semibold text-gray-800 text-center mb-2 transition-colors duration-700">
                   {QUOTES[current]}
                 </span>
+                <span className="mt-1 text-xs text-gray-500 tracking-wide">
+                  Next quote in 2 minutes
+                </span>
               </div>
               <div className="flex gap-1 mt-2">
                 {QUOTES.map((_, idx) => (
                   <span
                     key={idx}
-                    className={`h-1.0 w-1.0 rounded-full transition-all duration-300 ${
+                    className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
                       idx === current
                         ? "bg-[#C18653] shadow-lg scale-125"
                         : "bg-gray-300"
