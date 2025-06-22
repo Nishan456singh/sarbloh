@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import Link from "next/link"
 
 const heroImage = "/dessert.png"
 
@@ -24,9 +25,12 @@ const HeroSection: React.FC = () => {
             <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-[#C18653] font-semibold mb-4 sm:mb-6 text-center animate-fade-in delay-150">
               Listen, Discover, and Feel Every Beat
             </p>
-            <button className="px-6 py-2 sm:px-8 sm:py-3 bg-[#C18653] text-white font-bold rounded-full shadow-lg hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 animate-fade-in delay-300">
+            <Link
+              href="/music"
+              className="px-6 py-2 sm:px-8 sm:py-3 bg-[#C18653] text-white font-bold rounded-full shadow-lg hover:bg-[#2F5663] hover:text-[#C18653] transition-all duration-300 animate-fade-in delay-300"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>
