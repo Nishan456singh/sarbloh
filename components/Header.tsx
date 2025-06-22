@@ -19,7 +19,6 @@ const GLASS_STYLE =
   "backdrop-blur-md bg-white/30 border border-white/30 shadow-xl rounded-2xl px-6 py-4 flex flex-col items-center transition-all duration-700 ease-in-out"
 
 const Header: React.FC = () => {
-  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Quotes logic
